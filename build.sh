@@ -28,7 +28,7 @@ sed -i "s|^execute = 'firefox -profile '|execute = '/usr/lib/webapp-player/firef
 chmod +x usr/bin/ice
 
 mkdir -p pacote/DEBIAN
-mv usr/pacote
+mv usr pacote
 
 (
  echo "Package: webapp-player"
