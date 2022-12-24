@@ -17,9 +17,10 @@ cp i_dont_care_about_cookies-*.xpi usr/lib/webapp-player/browser/extensions/jid1
 
 mkdir -p usr/bin
 mkdir -p usr/lib/webapp-player/
-cp "places.sqlite"      -O usr/lib/webapp-player/
-cp "search.json.mozlz4" -O usr/lib/webapp-player/
-cp "webapp-player" usr/bin
+
+cp -n "places.sqlite"      usr/lib/webapp-player/
+cp -n "search.json.mozlz4" usr/lib/webapp-player/
+cp -n "webapp-player"      usr/bin
 
 chmod +x usr/bin/webapp-player
 
