@@ -9,5 +9,5 @@ Essa é uma implementação do backend Firefox do ICE já com o Firefox pré emp
 
 # :gear: Como funciona?
 
-Ele permite abrir sites como aplicativos através do Firefox de maneira isolada do perfil padrão do usuário, assim sendo, cookies, histórico ou quaisquer configurações e presonalização não são compartilhados nem entre os webapps nem entre o webapp e os perfis do usuário
+Ele permite abrir sites como aplicativos através do Firefox de maneira isolada do perfil padrão do usuário, desse modo, cookies, histórico ou quaisquer configurações e presonalização não são compartilhados nem entre os webapps nem entre o webapp e os perfis do usuário
 
