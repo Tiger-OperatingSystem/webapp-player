@@ -16,16 +16,12 @@ cp *firefox.signed.xpi "usr/lib/webapp-player/browser/extensions/uBlock0@raymond
 cp i_dont_care_about_cookies-*.xpi usr/lib/webapp-player/browser/extensions/jid1-KKzOGWgsW3Ao4Q@jetpack.xpi
 
 mkdir -p usr/bin
-wget -q "https://raw.githubusercontent.com/peppermintos/ice/master/usr/bin/ice-firefox" -O usr/bin/ice
+mkdir -p usr/lib/webapp-player/
+cp "places.sqlite"      -O usr/lib/webapp-player/
+cp "search.json.mozlz4" -O usr/lib/webapp-player/
+cp "webapp-player" usr/bin
 
-mkdir -p usr/lib/peppermint/ice/
-wget -q "https://raw.githubusercontent.com/peppermintos/ice/master/usr/lib/peppermint/ice/ice.glade"          -O usr/lib/peppermint/ice/ice.glade
-wget -q "https://raw.githubusercontent.com/peppermintos/ice/master/usr/lib/peppermint/ice/places.sqlite"      -O usr/lib/peppermint/ice/places.sqlite
-wget -q "https://raw.githubusercontent.com/peppermintos/ice/master/usr/lib/peppermint/ice/search.json.mozlz4" -O usr/lib/peppermint/ice/search.json.mozlz4
-
-sed -i "s|^execute = 'firefox -profile '|execute = '/usr/lib/webapp-player/firefox -profile '|g" usr/bin/ice
-
-chmod +x usr/bin/ice
+chmod +x usr/bin/webapp-player
 
 mkdir -p pacote/DEBIAN
 mv usr pacote
