@@ -12,7 +12,7 @@ profilepath = os.path.expanduser('~/.local/share/webapp-player/' + str(profileid
 chromepath = os.path.expanduser('~/.local/share/webapp-player/' + str(profileid) + '/chrome')
 path = os.path.dirname(chromepath)
 
-execute = 'firefox -profile ' + path + ' -no-remote -new-instance' + ' ' + sys.argv[1]
+execute = '/usr/lib/webapp-player/firefox -profile ' + path + ' -no-remote -new-instance' + ' ' + sys.argv[1]
 
 os.system('mkdir -p ' + chromepath)
 os.system('echo "#nav-bar, #identity-box, #tabbrowser-tabs, #TabsToolbar { visibility: collapse !important; }" > ' + chromepath + '/userChrome.css')
