@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DLD=$(wget -q "https://www.mozilla.org/pt-BR/firefox/all/" -O - | grep -E "os=linux64&amp;lang=pt-BR" | cut -d'"' -f2 | head -n 1)
-wget -c $DLD --trust-server-names
+#DLD=$(wget -q "https://www.mozilla.org/pt-BR/firefox/all/" -O - | grep -E "os=linux64&amp;lang=pt-BR" | cut -d'"' -f2 | head -n 1)
+wget -c "https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64" --trust-server-names
 ls firefox-*.tar.bz2 | cut -d "-" -f 2 | sed -e 's|.tar.bz2||g' > VERSION
 tar xf firefox*.tar.bz2
 URL2=$(wget -c "https://api.github.com/repos/gorhill/uBlock/releases" -O - | grep browser_download_url | grep 'firefox.signed.xpi"' | head -n 1 | cut -d '"' -f 4)
